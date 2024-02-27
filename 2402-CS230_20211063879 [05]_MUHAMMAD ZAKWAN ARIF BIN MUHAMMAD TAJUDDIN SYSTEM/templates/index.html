@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helmet & License Plate Detection System</title>
+    <style>
+        body {
+            background-image: url('/static/wallpaper.png'); /* Update the path accordingly */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .detection-button {
+            background-color: #0074cc;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        // JavaScript code to click the "Detect Helmet" button on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            var triggerHelmet = {{ trigger_helmet | default(False) | tojson | safe }};
+            if (triggerHelmet) {
+                document.getElementById('detectHelmetButton').click();
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form action="/detect_helmet" method="post" class="button-container">
+            <input type="submit" value="Detect Helmet" class="detection-button" id="detectHelmetButton">
+        </form>
+    </div>
+</body>
+</html>

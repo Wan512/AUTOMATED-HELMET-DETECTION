@@ -1,0 +1,42 @@
+[2402-CS230] 2021106387 (06) MUHAMMAD ZAKWAN ARIF BIN MUHAMMAD TAJUDDIN
+Automated Helmet Detection And Plates Number Detection Using Resnet-50
+
+
+#################################################################
+#                                                               #
+#                                                               #
+#                            SETUP                              #
+#                                                               #
+#                                                               #                                                  #                                                               #
+#################################################################
+
+-------------
+🛡️ DATASET:
+-------------
+
+- 1590 Classes ( Wearing Helmet & Not weaing helmet)
+
+------------------------
+🛠️ HOW TO USE:
+------------------------
+
+1. Setup Flask
+
+pip install flask
+
+2. Run the System
+
+Flask run app.py
+
+3. Utilize the System Functions
+
+run the app.py because it will run in realtime to detect the face,helmet and the number plate using easyOCR
+
+------------------------------------------------
+💻 BUILT WITH - SOFTWARE USED IN THIS PROJECT:
+------------------------------------------------
+
+- Jupyter Notebook
+- Anaconda
+- Flask
+- Static image
